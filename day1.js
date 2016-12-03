@@ -68,7 +68,7 @@ console.log('part 1 ', calculateDistance(sleighAttributes.y, sleighAttributes.x)
 
 
 
-const steps = input.split(',');
+const steps = input.split(', ');
 
 let x = 0, y = 0;
 let d = [0, 1];
@@ -77,7 +77,7 @@ visited.add(`${x},${y}`);
 
 function solve() {
     for (let i = 0; i < steps.length; i++) {
-        const step = steps[i].trim();
+        const step = steps[i];
         const direction = step.charAt(0);
         const distance = +step.substr(1);
         d = direction === 'L' ? [d[1], -d[0]] : [-d[1], d[0]];
